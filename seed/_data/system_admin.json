@@ -1,0 +1,24 @@
+[
+  {
+    "username": "barnaantech",
+    "firstName": "Bernabas",
+    "lastName": "Tekkalign",
+    "email": "barnaan@gmail.com",
+    "phoneNumber": "09453434434",
+    "profilePicture": "https://firebase.com/user.png",
+    "role": "useruser",
+    "password": "admin123",
+    "confirmPassword": "admin123"
+  },
+  {
+    "username": "abelTech",
+    "firstName": "Bernabas",
+    "lastName": "Tekkalign",
+    "email": "barnaan@gmail.com",
+    "phoneNumber": "093434434",
+    "profilePicture": "https://firebase.com/user.png",
+    "role": "useruser",
+    "password": "admin123",
+    "confirmPassword": "admin123"
+  }
+]

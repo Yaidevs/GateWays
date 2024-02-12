@@ -1,0 +1,10 @@
+{
+  "UserApi": {
+    "url": "http://user.dawaafinder.com",
+    "routes": ["/register", "/login"]
+  },
+  "pharmacy": {
+    "url": "http://pharmacy.dawaafinder.com",
+    "routes": ["/pharmacies", "/products"]
+  }
+}
