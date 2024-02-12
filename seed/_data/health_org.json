@@ -1,0 +1,32 @@
+[
+  {
+    "firstName": "Bernabas",
+    "lastName": "Tekkalign",
+    "email": "barbnaan@gmail.com",
+    "phoneNumber": "09453434434",
+    "profilePicture": "https://firebase.com/user.png",
+    "role": "super user",
+    "password": "admin123",
+    "confirmPassword": "admin123"
+  },
+  {
+    "firstName": "Bernabas",
+    "lastName": "Tekkalign",
+    "email": "barnahan@gmail.com",
+    "phoneNumber": "09453434",
+    "role": "admin",
+    "profilePicture": "https://firebase.com/user.png",
+    "password": "admin123",
+    "confirmPassword": "admin123"
+  },
+  {
+    "firstName": "Bernabas",
+    "lastName": "Tekkalign",
+    "email": "barnfaan@gmail.com",
+    "phoneNumber": "09453434",
+    "role": "admin",
+    "profilePicture": "https://firebase.com/user.png",
+    "password": "admin123",
+    "confirmPassword": "admin123"
+  }
+]
