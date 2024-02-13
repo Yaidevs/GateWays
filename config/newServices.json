@@ -1,0 +1,86 @@
+{
+  "userApi": {
+    "url": "https://user.dawaafinder.com",
+    "route_details": [
+      {
+        "route": "/register",
+        "auth_required": false,
+        "allowed_roles": []
+      },
+      {
+        "route": "/login",
+        "auth_required": false,
+        "allowed_roles": []
+      },
+      {
+        "route": "/update",
+        "auth_required": true,
+        "allowed_roles": ["__all__"]
+      },
+      {
+        "route": "/upgradeToAdmin",
+        "auth_required": true,
+        "allowed_roles": ["systemAdmin", "superUSer"]
+      }
+    ]
+  },
+  "Product": {
+    "url": "https://productapi.dawaafinder.com",
+    "route_details": [
+      {
+        "route": "/products",
+        "method": "GET",
+        "auth_required": false,
+        "allowed_roles": []
+      },
+      {
+        "route": "/medicine",
+        "method": "GET",
+        "auth_required": false,
+        "allowed_roles": []
+      },
+      {
+        "route": "/products",
+        "method": "POST",
+        "auth_required": true,
+        "allowed_roles": ["healthOrg"]
+      },
+      {
+        "route": "/medicine/:medicineName",
+        "auth_required": false,
+        "method": "GET",
+        "allowed_roles": []
+      }
+    ]
+  },
+
+  "user": {
+    "url": "https://productapi.dawaafinder.com",
+    "route_details": [
+      {
+        "route": "/products",
+        "method": "GET",
+        "auth_required": false,
+        "allowed_roles": []
+      },
+      {
+        "route": "/medicine",
+        "method": "GET",
+        "auth_required": false,
+        "allowed_roles": []
+      },
+      {
+        "route": "/products",
+        "method": "POST",
+        "auth_required": true,
+        "allowed_roles": ["healthOrg"]
+      },
+      {
+        "route": "/medicine/:medicineName",
+        "auth_required": false,
+        "method": "GET",
+        "allowed_roles": []
+      }
+    ]
+  }
+}
