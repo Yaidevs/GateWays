@@ -5,7 +5,7 @@ const rateLimit = require("express-rate-limit");
 const notFound = require("./middleware/404.middleware");
 const errorMiddleware = require("./middleware/errors.middleware");
 const morgan = require("morgan");
-
+const serviceDiscovery = require("./middleware/serviceDiscovery.middleware");
 exports.createServer = () => {
 	const app = express();
 
@@ -20,7 +20,7 @@ exports.createServer = () => {
 
 	// ? ROUTES
 	// app.use(
-	// "/api/v1/customers/",
+	// "/api/v1/",
 	// require("./src/modules/customer/customer.route")
 	// );
 
@@ -29,8 +29,9 @@ exports.createServer = () => {
 		res.status(200).send(" DawaFinder Getway  server is UP!");
 	});
 	// not found for non existing existing.
-	app.all("*", notFound);
+	// app.all("*", notFound);
 	app.use(errorMiddleware);
+	app.use(serviceDiscovery);
 
 	return app;
 };
