@@ -1,7 +1,7 @@
 {
   "UserApi": {
     "url": "https://user.dawaafinder.com/api/v1",
-    "routes": ["/register", "/login"]
+    "routes": ["/register", "/login", "/customers"]
   },
   "productApi": {
     "url": "https://productapi.dawaafinder.com/api/v1",

@@ -1,7 +1,38 @@
 {
   "userApi": {
-    "url": "https://user.dawaafinder.com",
+    "url": "http://localhost:5000/api/v1",
     "route_details": [
+      {
+        "route": "/customers",
+        "auth_required": true,
+        "method": "GET",
+        "allowed_roles": ["customer"]
+      },
+      {
+        "route": "/customers/login",
+        "auth_required": false,
+        "method": "POST",
+        "allowed_roles": []
+      },
+
+      {
+        "route": "/health-orgs/",
+        "auth_required": false,
+        "method": "POST",
+        "allowed_roles": []
+      },
+      {
+        "route": "/health-orgs/",
+        "auth_required": false,
+        "method": "GET",
+        "allowed_roles": []
+      },
+      {
+        "route": "/system-admins/",
+        "auth_required": false,
+        "method": "GET",
+        "allowed_roles": []
+      },
       {
         "route": "/register",
         "auth_required": false,
@@ -9,9 +40,9 @@
         "allowed_roles": []
       },
       {
-        "route": "/login",
+        "route": "/customers/login",
         "auth_required": false,
-        "method": "GET",
+        "method": "POST",
         "allowed_roles": []
       },
       {
