@@ -85,13 +85,4 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 
 });
 
-// const checkUserRoles = async (user, allowedRoles) => {
-// // Implement your user role checking logic here (e.g., check against user roles in a database)
-
-// // For simplicity, assuming req.user.roles is an array of user roles
-// const userRoles = user.roles || [];
-
-// return allowedRoles.some(role => userRoles.includes(role));
-// };
-
 module.exports = serviceDiscovery;

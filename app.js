@@ -6,6 +6,9 @@ const notFound = require("./middleware/404.middleware");
 const errorMiddleware = require("./middleware/errors.middleware");
 const morgan = require("morgan");
 const serviceDiscovery = require("./middleware/serviceDiscovery.middleware");
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('./swagger-output.json')
+
 exports.createServer = () => {
 	const app = express();
 
@@ -23,7 +26,8 @@ exports.createServer = () => {
 	// "/api/v1/",
 	// require("./src/modules/customer/customer.route")
 	// );
-
+	// ? SWagger UI
+	app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 	// endpoint for checking if the server is up.
 	app.get("/", (_req, res) => {
 		res.status(200).send(" DawaFinder Getway  server is UP!");
