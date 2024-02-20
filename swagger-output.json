@@ -5,7 +5,7 @@
     "description": "DawaFinder Getway Api is a getway to access all dawafinder microservices.",
     "version": "1.0.0"
   },
-  "host": "api.dawaafinder.com",
+  "host": "localhost:4000",
   "basePath": "/",
   "schemes": ["http", "https"],
   "tags": [
@@ -20,6 +20,18 @@
     {
       "name": "SystemAdmins",
       "description": "Operations related to system administrators"
+    },
+    {
+      "name": "Products",
+      "description": "Operations related to products"
+    },
+    {
+      "name": "Product-categories",
+      "description": "Operations related to product-categories"
+    },
+    {
+      "name": "Medicines",
+      "description": "Operations related to medicines"
     }
   ],
   "paths": {
@@ -34,7 +46,7 @@
         }
       }
     },
-    "/api/v1/customers/": {
+    "/customers/": {
       "get": {
         "description": "Customers",
         "tags": ["Customers"],
@@ -45,7 +57,7 @@
         }
       }
     },
-    "/api/v1/customers/login": {
+    "/customers/login": {
       "post": {
         "description": "",
         "tags": ["Customers"],
@@ -73,7 +85,7 @@
         }
       }
     },
-    "/api/v1/customers/deleted": {
+    "/customers/deleted": {
       "get": {
         "description": "",
         "tags": ["Customers"],
@@ -84,7 +96,7 @@
         }
       }
     },
-    "/api/v1/customers/{customerId}": {
+    "/customers/{customerId}": {
       "get": {
         "description": "",
         "tags": ["Customers"],
@@ -149,7 +161,7 @@
         }
       }
     },
-    "/api/v1/health-orgs/": {
+    "/health-orgs/": {
       "get": {
         "description": "",
         "tags": ["HealthOrgs"],
@@ -201,7 +213,7 @@
         }
       }
     },
-    "/api/v1/health-orgs/login": {
+    "/health-orgs/login": {
       "post": {
         "description": "",
         "tags": ["HealthOrgs"],
@@ -229,7 +241,7 @@
         }
       }
     },
-    "/api/v1/health-orgs/{healthOrgId}": {
+    "/health-orgs/{healthOrgId}": {
       "get": {
         "description": "",
         "tags": ["HealthOrgs"],
@@ -300,7 +312,7 @@
         }
       }
     },
-    "/api/v1/health-orgs/{healthOrgId}/remove": {
+    "/health-orgs/{healthOrgId}/remove": {
       "delete": {
         "description": "",
         "tags": ["HealthOrgs"],
@@ -319,7 +331,7 @@
         }
       }
     },
-    "/api/v1/health-orgs/{healthOrgId}/restore": {
+    "/health-orgs/{healthOrgId}/restore": {
       "patch": {
         "description": "",
         "tags": ["HealthOrgs"],
@@ -338,7 +350,7 @@
         }
       }
     },
-    "/api/v1/health-orgs/{healthOrgId}/change-password": {
+    "/health-orgs/{healthOrgId}/change-password": {
       "patch": {
         "description": "",
         "tags": ["HealthOrgs"],
@@ -372,7 +384,7 @@
         }
       }
     },
-    "/api/v1/health-orgs/{healthOrgId}/upgrade-to-admin": {
+    "/health-orgs/{healthOrgId}/upgrade-to-admin": {
       "patch": {
         "description": "",
         "tags": ["HealthOrgs"],
@@ -391,7 +403,7 @@
         }
       }
     },
-    "/api/v1/health-orgs/{healthOrgId}/upgrade-to-super-admin": {
+    "/health-orgs/{healthOrgId}/upgrade-to-super-admin": {
       "patch": {
         "description": "",
         "tags": ["HealthOrgs"],
@@ -410,7 +422,7 @@
         }
       }
     },
-    "/api/v1/health-orgs/{healthOrgId}/downgrade-to-admin": {
+    "/health-orgs/{healthOrgId}/downgrade-to-admin": {
       "patch": {
         "description": "",
         "tags": ["HealthOrgs"],
@@ -429,7 +441,7 @@
         }
       }
     },
-    "/api/v1/health-orgs/{healthOrgId}/downgrade-to-employee": {
+    "/health-orgs/{healthOrgId}/downgrade-to-employee": {
       "patch": {
         "description": "",
         "tags": ["HealthOrgs"],
@@ -448,7 +460,7 @@
         }
       }
     },
-    "/api/v1/system-admins/": {
+    "/system-admins/": {
       "get": {
         "description": "",
         "tags": ["SystemAdmins"],
@@ -468,7 +480,7 @@
         }
       }
     },
-    "/api/v1/system-admins/login": {
+    "/system-admins/login": {
       "post": {
         "description": "",
         "tags": ["SystemAdmins"],
@@ -496,7 +508,7 @@
         }
       }
     },
-    "/api/v1/system-admins/{systemAdminId}": {
+    "/system-admins/{systemAdminId}": {
       "get": {
         "description": "",
         "tags": ["SystemAdmins"],
@@ -567,7 +579,7 @@
         }
       }
     },
-    "/api/v1/system-admins/{systemAdminId}/remove": {
+    "/system-admins/{systemAdminId}/remove": {
       "delete": {
         "description": "",
         "tags": ["SystemAdmins"],
@@ -586,7 +598,7 @@
         }
       }
     },
-    "/api/v1/system-admins/{systemAdminId}/restore": {
+    "/system-admins/{systemAdminId}/restore": {
       "patch": {
         "description": "",
         "tags": ["SystemAdmins"],
@@ -605,7 +617,7 @@
         }
       }
     },
-    "/api/v1/system-admins/{systemAdminId}/upgrade-role": {
+    "/system-admins/{systemAdminId}/upgrade-role": {
       "patch": {
         "description": "",
         "tags": ["SystemAdmins"],
@@ -624,7 +636,7 @@
         }
       }
     },
-    "/api/v1/system-admins/{systemAdminId}/downgrade-role": {
+    "/system-admins/{systemAdminId}/downgrade-role": {
       "patch": {
         "description": "",
         "tags": ["SystemAdmins"],
@@ -643,7 +655,7 @@
         }
       }
     },
-    "/api/v1/system-admins/{systemAdminId}/change-password": {
+    "/system-admins/{systemAdminId}/change-password": {
       "patch": {
         "description": "",
         "tags": ["SystemAdmins"],
@@ -673,6 +685,355 @@
         "responses": {
           "201": {
             "description": "Created"
+          }
+        }
+      }
+    },
+
+    "none": {
+      "get": {
+        "description": "",
+        "tags": ["Products"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/products/": {
+      "get": {
+        "description": "",
+        "tags": ["Products"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "tags": ["Products"],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "category": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/products/{productId}": {
+      "get": {
+        "description": "",
+        "tags": ["Products"],
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "tags": ["Products"],
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      },
+      "patch": {
+        "description": "",
+        "tags": ["Products"],
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/products/{productId}/remove": {
+      "delete": {
+        "description": "",
+        "tags": ["Products"],
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/products/{productId}/restore": {
+      "delete": {
+        "description": "",
+        "tags": ["Products"],
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/products/erased": {
+      "get": {
+        "description": "",
+        "tags": ["Products"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/product-categories/": {
+      "get": {
+        "description": "",
+        "tags": ["Product-categories"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "tags": ["Product-categories"],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/product-categories/{categoryId}": {
+      "get": {
+        "description": "",
+        "tags": ["Product-categories"],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "tags": ["Product-categories"],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      },
+      "patch": {
+        "description": "",
+        "tags": ["Product-categories"],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/product-categories/{categoryId}/remove": {
+      "delete": {
+        "description": "",
+        "tags": ["Product-categories"],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/product-categories/{categoryId}/restore": {
+      "delete": {
+        "description": "",
+        "tags": ["Product-categories"],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/product-categories/erased": {
+      "get": {
+        "description": "",
+        "tags": ["Product-categories"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/medicines/{medicineName}": {
+      "get": {
+        "description": "",
+        "tags": ["Medicines"],
+        "parameters": [
+          {
+            "name": "medicineName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/medicines/updateList": {
+      "post": {
+        "description": "",
+        "tags": ["Medicines"],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/medicines/suggestions/{medicineName}": {
+      "get": {
+        "description": "",
+        "tags": ["Medicines"],
+        "parameters": [
+          {
+            "name": "medicineName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/medicines/filter/{medicineName}": {
+      "get": {
+        "description": "",
+        "tags": ["Medicines"],
+        "parameters": [
+          {
+            "name": "medicineName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }

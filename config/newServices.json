@@ -3,37 +3,37 @@
     "url": "https://user.dawaafinder.com/api/v1",
     "route_details": [
       {
-        "route": "/customers",
+        "route": "/customers/",
         "auth_required": true,
         "method": "GET",
         "allowed_roles": ["customer"]
       },
       {
-        "route": "/customers/login",
+        "route": "/customers/login/",
         "auth_required": false,
         "method": "POST",
         "allowed_roles": []
       },
       {
-        "route": "/customers/{{ID}}",
+        "route": "/customers/{{ID}}/",
         "auth_required": true,
         "method": "PATCH",
         "allowed_roles": ["customer"]
       },
       {
-        "route": "/customers/{{ID}}",
+        "route": "/customers/{{ID}}/",
         "auth_required": true,
         "method": "DELETE",
         "allowed_roles": ["customer"]
       },
       {
-        "route": "/customers/{{ID}}",
+        "route": "/customers/{{ID}}/",
         "auth_required": true,
         "method": "GET",
         "allowed_roles": ["customer"]
       },
       {
-        "route": "/customers/deleted",
+        "route": "/customers/deleted/",
         "auth_required": true,
         "method": "GET",
         "allowed_roles": ["systemAdmin"]
@@ -52,7 +52,7 @@
         "allowed_roles": []
       },
       {
-        "route": "/health-orgs/login",
+        "route": "/health-orgs/login/",
         "auth_required": false,
         "method": "POST",
         "allowed_roles": []
@@ -64,7 +64,7 @@
         "allowed_roles": ["healthOrg"]
       },
       {
-        "route": "/health-orgs/{healthOrgId}/change-password",
+        "route": "/health-orgs/{healthOrgId}/change-password/",
         "auth_required": true,
         "method": "PATCH",
         "allowed_roles": ["healthOrg"]
@@ -76,25 +76,25 @@
         "allowed_roles": ["healthOrg"]
       },
       {
-        "route": "/health-orgs/{{ID}}",
+        "route": "/health-orgs/{{ID}}/",
         "auth_required": true,
         "method": "GET",
         "allowed_roles": ["healthOrg", "systemAdmin"]
       },
       {
-        "route": "/health-orgs/{healthOrgId}/remove",
+        "route": "/health-orgs/{healthOrgId}/remove/",
         "auth_required": true,
         "method": "DELETE",
         "allowed_roles": ["healthOrg", "systemAdmin"]
       },
       {
-        "route": "/health-orgs/{healthOrgId}/restore",
+        "route": "/health-orgs/{healthOrgId}/restore/",
         "auth_required": true,
         "method": "PATCH",
         "allowed_roles": ["systemAdmin"]
       },
       {
-        "route": "/health-orgs/deleted",
+        "route": "/health-orgs/deleted/",
         "auth_required": true,
         "method": "GET",
         "allowed_roles": ["systemAdmin"]
@@ -107,50 +107,50 @@
         "allowed_roles": ["systemAdmin"]
       },
       {
-        "route": "/system-admins/login",
+        "route": "/system-admins/login/",
         "auth_required": false,
         "method": "POST",
         "allowed_roles": []
       },
 
       {
-        "route": "/system-admins/{{ID}}",
+        "route": "/system-admins/{{ID}}/",
         "auth_required": true,
         "method": "PATCH",
         "allowed_roles": ["systemAdmin"]
       },
       {
-        "route": "/system-admins/{healthOrgId}/change-password",
+        "route": "/system-admins/{healthOrgId}/change-password/",
         "auth_required": true,
         "method": "PATCH",
         "allowed_roles": ["systemAdmin"]
       },
       {
-        "route": "/system-admins/{{ID}}",
+        "route": "/system-admins/{{ID}}/",
         "auth_required": true,
         "method": "DELETE",
         "allowed_roles": ["systemAdmin"]
       },
       {
-        "route": "/system-admins/{{ID}}",
+        "route": "/system-admins/{{ID}}/",
         "auth_required": true,
         "method": "GET",
         "allowed_roles": ["systemAdmin"]
       },
       {
-        "route": "/system-admins/{healthOrgId}/remove",
+        "route": "/system-admins/{healthOrgId}/remove/",
         "auth_required": true,
         "method": "DELETE",
         "allowed_roles": ["systemAdmin"]
       },
       {
-        "route": "/system-admins/{healthOrgId}/restore",
+        "route": "/system-admins/{healthOrgId}/restore/",
         "auth_required": true,
         "method": "PATCH",
         "allowed_roles": ["systemAdmin"]
       },
       {
-        "route": "/system-admins/deleted",
+        "route": "/system-admins/deleted/",
         "auth_required": true,
         "method": "GET",
         "allowed_roles": ["systemAdmin"]
@@ -162,7 +162,7 @@
     "url": "https://productapi.dawaafinder.com/api/v1",
     "route_details": [
       {
-        "route": "/products",
+        "route": "/products/",
         "method": "GET",
         "auth_required": false,
         "allowed_roles": []
@@ -174,19 +174,19 @@
         "allowed_roles": []
       },
       {
-        "route": "/products",
+        "route": "/products/",
         "method": "POST",
         "auth_required": true,
         "allowed_roles": ["healthOrg", "systemAdmin"]
       },
       {
-        "route": "/products",
+        "route": "/products/",
         "method": "PATCH",
         "auth_required": true,
         "allowed_roles": ["healthOrg", "systemAdmin"]
       },
       {
-        "route": "/products/{{ID}}",
+        "route": "/products/{{ID}}/",
         "method": "DELETE",
         "auth_required": true,
         "allowed_roles": ["healthOrg", "systemAdmin"]
@@ -198,7 +198,7 @@
         "allowed_roles": []
       },
       {
-        "route": "/product-categories/{{ID}}",
+        "route": "/product-categories/{{ID}}/",
         "method": "GET",
         "auth_required": false,
         "allowed_roles": []
@@ -216,31 +216,31 @@
         "allowed_roles": ["systemAdmin"]
       },
       {
-        "route": "/product-categories/{{ID}}",
+        "route": "/product-categories/{{ID}}/",
         "method": "DELETE",
         "auth_required": true,
         "allowed_roles": ["systemAdmin"]
       },
       {
-        "route": "/medicine",
+        "route": "/medicine/",
         "method": "GET",
         "auth_required": false,
         "allowed_roles": []
       },
       {
-        "route": "/medicines/:medicineName",
+        "route": "/medicines/:medicineName/",
         "auth_required": false,
         "method": "GET",
         "allowed_roles": []
       },
       {
-        "route": "/medicines/updateList",
+        "route": "/medicines/updateList/",
         "auth_required": false,
         "method": "POST",
         "allowed_roles": ["systemAdmin"]
       },
       {
-        "route": "/medicines/suggestions/:medicineName",
+        "route": "/medicines/suggestions/:medicineName/",
         "auth_required": false,
         "method": "GET",
         "allowed_roles": []
