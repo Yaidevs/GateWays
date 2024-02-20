@@ -5,6 +5,8 @@ const axios = require('axios');
 const {getMethod} = require("./../utils/reqUtils");
 const {getRole} = require("./auth.middleware");
 
+
+// ! BRAKE DOWN THIS TO CLASS AND MAKE IT UNDERSTANDABLE.
 // Service discovery middleware for finding and redirecting to the right microservices.
 const serviceDiscovery = catchAsync(async (req, res, next) => {
 	const route = req.originalUrl;
@@ -17,9 +19,12 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 	if (matchedService) {
 		const [serviceName, serviceDetails] = matchedService;
 		const routeDetails = serviceDetails.route_details.find(routeConfig => routeConfig.route === route && routeConfig.method === req.method);
-
-		// Rewrite the request URL to the microservice's URL
-		req.url = routeDetails.route;
+		if (routeDetails.route.includes('{{ID}}')) {
+			const idParam = req.params.Id; // Assuming you're using Express and the ID is part of the route params
+			req.url = routeDetails.route.replace('{{ID}}', idParam);
+		} else { // If no parameters, use the original route
+			req.url = routeDetails.route;
+		}
 
 		req.headers['host'] = new URL(serviceDetails.url).host;
 		console.log(serviceDetails.url + req.url);
@@ -81,6 +86,8 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 		}
 		let microserviceResponse = await microserviceRes();
 		res.status(microserviceResponse.status).json(microserviceResponse.data);
+	} else {
+		next();
 	}
 
 });

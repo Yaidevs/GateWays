@@ -33,9 +33,9 @@ exports.createServer = () => {
 		res.status(200).send(" DawaFinder Getway  server is UP!");
 	});
 	// not found for non existing existing.
-	// app.all("*", notFound);
-	app.use(errorMiddleware);
 	app.use(serviceDiscovery);
+	app.all("*", notFound);
+	app.use(errorMiddleware);
 
 	return app;
 };
