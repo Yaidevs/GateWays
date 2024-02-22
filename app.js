@@ -22,10 +22,7 @@ exports.createServer = () => {
 	app.use(mongoSanitize());
 
 	// ? ROUTES
-	// app.use(
-	// "/api/v1/",
-	// require("./src/modules/customer/customer.route")
-	// );
+	// app.use("*", require("./src/modules/getway/getway.routes"));
 	// ? SWagger UI
 	app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 	// endpoint for checking if the server is up.
@@ -34,7 +31,7 @@ exports.createServer = () => {
 	});
 	// not found for non existing existing.
 	app.use(serviceDiscovery);
-	app.all("*", notFound);
+	// app.all("*", notFound);
 	app.use(errorMiddleware);
 
 	return app;

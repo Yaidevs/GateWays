@@ -1,10 +1,8 @@
 {
-  "UserApi": {
-    "url": "https://user.dawaafinder.com/api/v1",
-    "routes": ["/register", "/login", "/customers"]
+  "userapi": {
+    "url": "https://user.dawaafinder.com/api/v1/"
   },
-  "productApi": {
-    "url": "https://productapi.dawaafinder.com/api/v1",
-    "routes": ["/medicines", "/medicines/suggestions/", "/products"]
+  "productapi": {
+    "url": "https://productapi.dawaafinder.com/api/v1/"
   }
 }
