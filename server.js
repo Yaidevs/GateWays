@@ -1,7 +1,7 @@
 // const connectDb = require("./config/db");
 const {createServer} = require("./app.js");
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 
 /*
 General error handling for syncronus code.
