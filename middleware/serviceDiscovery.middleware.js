@@ -8,7 +8,9 @@ const services = require("./../config/services.json");
 
 const serviceDiscovery = catchAsync(async (req, res, next) => {
 	let originalUrl = req.originalUrl.split("/");
+	console.log(originalUrl);
 	const serviceName = req.originalUrl.split("/")[1];
+	console.log(serviceName);
 	if (! serviceName || ! services.hasOwnProperty(serviceName)) {
 		res.status(404).json({success: false, message: "Service not found"});
 		return;
@@ -17,6 +19,7 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 	originalUrl = originalUrl.length > 2 ? originalUrl.slice(start = 2) : ["/"];
 	const url = originalUrl.join("/");
 	const base = serviceMetadata.url;
+	console.log(base);
 	const totalUrl = base + url;
 	// console.log(totalUrl);
 	// console.log(req.headers);
