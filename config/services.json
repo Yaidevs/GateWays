@@ -1,6 +1,6 @@
 {
   "userapi": {
-    "url": "http://localhost:5000/api/v1/",
+    "url": "http://user.dawaafinder.com/api/v1/",
     "docUrl": "http://user.dawaafinder.com/api/v1/doc/"
   },
   "productapi": {
