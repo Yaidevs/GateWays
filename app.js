@@ -22,16 +22,14 @@ exports.createServer = () => {
 	app.use(mongoSanitize());
 
 	// ? ROUTES
-	// app.use("*", require("./src/modules/getway/getway.routes"));
 	// ? SWagger UI
-	app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+	// app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+	app.use('/doc', require("./middleware/docs.middleware"));
 	// endpoint for checking if the server is up.
 	app.get("/", (_req, res) => {
 		res.status(200).send(" DawaFinder Getway  server is UP!");
 	});
-	// not found for non existing existing.
 	app.use(serviceDiscovery);
-	// app.all("*", notFound);
 	app.use(errorMiddleware);
 
 	return app;

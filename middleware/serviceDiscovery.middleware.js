@@ -18,23 +18,27 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 	const url = originalUrl.join("/");
 	const base = serviceMetadata.url;
 	const totalUrl = base + url;
-	console.log(totalUrl);
+	// console.log(totalUrl);
+	// console.log(req.headers);
 	const role = req.headers.authorization ? await getRole(req) : null;
+	console.log(role);
 	req.headers.authorization = null;
-	req.headers.role = role.role;
+	req.headers.role = role;
 	console.log(req.headers);
-	// first find the
-	microserviceRes = async () => {
+
+	const microserviceRes = async () => {
 		try {
 			const response = await axios({method: req.method, url: totalUrl, headers: req.headers, data: req.body});
-			console.log(response);
+			// console.log(response);
 			return response;
-		} catch (err) {
-			console.error(err);
+		} catch (err) { // console.error(err);
 			return err.response;
 		}
 	}
-	return await microserviceRes();
+
+
+	let microserviceResponse = await microserviceRes();
+	res.status(microserviceResponse.status).json(microserviceResponse.data);
 
 
 });
