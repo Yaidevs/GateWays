@@ -1,7 +1,7 @@
 {
   "userapi": {
-    "url": "http://user.dawaafinder.com/api/v1/",
-    "docUrl": "http://user.dawaafinder.com/api/v1/doc/"
+    "url": "https://user.dawaafinder.com/api/v1/",
+    "docUrl": "https://user.dawaafinder.com/api/v1/doc/"
   },
   "productapi": {
     "url": "https://productapi.dawaafinder.com/api/v1/"
