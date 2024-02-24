@@ -28,23 +28,25 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 	req.headers.authorization = null;
 	req.headers.role = role;
 	console.log(req.headers);
-
-	const microserviceRes = async () => {
-		try {
-			const response = await axios({method: req.method, url: totalUrl, headers: req.headers, data: req.body});
-			// console.log(response);
-			return response;
-		} catch (err) { // console.error(err);
-			return err.response;
-		}
-	}
-
-
-	let microserviceResponse = await microserviceRes();
+	let microserviceResponse = await microserviceRes(req, totalUrl);
+	// console.log(microserviceResponse);
 	res.status(microserviceResponse.status).json(microserviceResponse.data);
 
 
 });
+
+
+const microserviceRes = async (req, url) => {
+	try {
+		const response = await axios({method: req.method, url: url, headers: req.headers, data: req.body});
+		console.log("hell there what is going on  HEEL O THIS THIS IT .")
+		console.log(response);
+		return response;
+	} catch (err) {
+		console.error(err);
+		return err.response;
+	}
+}
 
 
 // const serviceDiscovery = catchAsync(async (req, res, next) => {
