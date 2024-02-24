@@ -3,7 +3,7 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 	const serviceName = req.originalUrl.split("/")[2];
 	console.log(serviceName);
 	if (! serviceName || ! services.hasOwnProperty(serviceName)) {
-		res.status(404).json({success: false, message: "Service not found"});
+		res.status(404).json({success: false, message: "docs not found"});
 		return;
 	}
 	const serviceMetadata = services[serviceName];

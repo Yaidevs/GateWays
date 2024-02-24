@@ -18,7 +18,7 @@ process.on("uncaughtException", (err) => {
 
 const app = createServer();
 app.listen(PORT, () => {
-	console.log("app is listenning");
+	console.log(`app is listening on port ${PORT}`);
 	// //? Connecting to the database.
 	// connectDb();
 });
