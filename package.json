@@ -31,6 +31,7 @@
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.1",
     "morgan": "^1.10.0",
+    "node-fetch": "^3.3.2",
     "nodemon": "^3.0.1",
     "swagger-ui-express": "^5.0.0"
   },

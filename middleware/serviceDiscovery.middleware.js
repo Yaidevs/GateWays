@@ -39,13 +39,11 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 
 const microserviceRes = async (req, url) => {
 	try {
-		const agent = new https.Agent({rejectUnauthorized: false});
 		const response = await axios({
-			method: req.method,
-			url: url,
-			headers: req.headers,
+			method: req.method, url: url,
+			// headers: req.headers,
 			data: req.body,
-			httpsAgent: agent
+			// httpsAgent: agent
 		});
 		console.log("hell there what is going on  HEEL O THIS THIS IT .")
 		console.log(response);
