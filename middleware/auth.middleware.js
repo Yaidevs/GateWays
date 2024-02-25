@@ -1,20 +1,28 @@
 const axios = require('axios');
 
 exports.getRole = async (req) => {
-	const url = 'http://localhost:5000/api/v1/user/role';
+	const url = 'https://user.dawaafinder.com/api/v1/user/role';
 
 	const headers = {
-		Authorization: req.headers.authorization, // Pass the Bearer token from the original request
+		'Content-Type': 'application/json',
+		'Authorization': req.headers.authorization
 	};
 
-	const microserviceRes = async () => {
-		try {
-			const response = await axios({method: 'GET', url: url, headers: headers});
-			return response.data.role; // Return the data property of the response
-		} catch (err) { // console.error(err);
-			return err.response.data; // Return the data property of the error response
-		}
-	};
 
-	return microserviceRes();
+	const response = await microserviceRes(headers, url);
+	return response;
+};
+
+const microserviceRes = async (headers, url) => {
+	try {
+		console.log(headers);
+		console.log(url)
+		const response = await axios({method: 'GET', url: url, headers: headers});
+		console.log(response);
+		const role = response.data.role;
+		return role ? role : null;
+	} catch (err) { // err.response.data;
+		console.log(`the error is ${err}`);
+		return null;
+	}
 };

@@ -39,12 +39,27 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 
 const microserviceRes = async (req, url) => {
 	try {
-		const response = await axios({
-			method: req.method, url: url,
-			// headers: req.headers,
-			data: req.body,
-			// httpsAgent: agent
-		});
+
+		console.log(req.headers.role);
+		const headers = {
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': '*', // this will be replace by my allowed origin id.
+			'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
+			'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+			'Access-Control-Allow-Credentials': true,
+			'role': req.headers.role
+		};
+
+		console.log(headers)
+		// Use these headers in your request
+		const response = await axios({method: req.method, url: url, headers: headers, data: req.body});
+
+		// const response = await axios({
+		// method: req.method, url: url,
+		// // headers: req.headers,
+		// data: req.body,
+		// // httpsAgent: agent
+		// });
 		console.log("hell there what is going on  HEEL O THIS THIS IT .")
 		console.log(response);
 		return response;
