@@ -5,6 +5,7 @@ const axios = require('axios');
 const {getMethod} = require("./../utils/reqUtils");
 const {getRole} = require("./auth.middleware");
 const services = require("./../config/services.json");
+const https = require('https');
 
 const serviceDiscovery = catchAsync(async (req, res, next) => {
 	let originalUrl = req.originalUrl.split("/");
@@ -27,7 +28,7 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 	console.log(role);
 	req.headers.authorization = null;
 	req.headers.role = role;
-	console.log(req.headers);
+	// console.log(req.headers);
 	let microserviceResponse = await microserviceRes(req, totalUrl);
 	// console.log(microserviceResponse);
 	res.status(microserviceResponse.status).json(microserviceResponse.data);
@@ -38,13 +39,31 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 
 const microserviceRes = async (req, url) => {
 	try {
-		const response = await axios({method: req.method, url: url, headers: req.headers, data: req.body});
+		const agent = new https.Agent({rejectUnauthorized: false});
+		const response = await axios({
+			method: req.method,
+			url: url,
+			headers: req.headers,
+			data: req.body,
+			httpsAgent: agent
+		});
 		console.log("hell there what is going on  HEEL O THIS THIS IT .")
 		console.log(response);
 		return response;
 	} catch (err) {
-		console.error(err);
-		return err.response;
+		console.error('Response error data:', err.response.data);
+		console.error('Response error status:', err.response.status);
+		console.error('Response error headers:', err.response.headers);
+		let response = err.response;
+		if (! response) {
+			response = {
+				"status": 503,
+				"data": " The microservice is not aviliable/accessable"
+			}
+
+		}
+
+		return response;
 	}
 }
 
