@@ -5,5 +5,9 @@
   },
   "productapi": {
     "url": "https://productapi.dawaafinder.com/api/v1/"
+  },
+  "Barnaan": {
+    "url": "barnaan.com",
+    "docUrl": "barnaan.doc"
   }
 }
