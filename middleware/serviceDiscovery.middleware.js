@@ -64,9 +64,6 @@ const microserviceRes = async (req, url) => {
 		console.log(response);
 		return response;
 	} catch (err) {
-		console.error('Response error data:', err.response.data);
-		console.error('Response error status:', err.response.status);
-		console.error('Response error headers:', err.response.headers);
 		let response = err.response;
 		if (! response) {
 			response = {
