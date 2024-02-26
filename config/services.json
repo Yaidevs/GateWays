@@ -4,10 +4,19 @@
     "docUrl": "https://user.dawaafinder.com/api/v1/doc/"
   },
   "productapi": {
-    "url": "https://productapi.dawaafinder.com/api/v1/"
+    "url": "https://productapi.dawaafinder.com/api/v1/",
+    "docUrl": "https://productapi.dawaafinder.com/docs/"
   },
-  "Barnaan": {
-    "url": "barnaan.com",
-    "docUrl": "barnaan.doc"
+  "inventoryapi": {
+    "url": "https://inventoryapi.dawaafinder.com/api/v1/",
+    "docUrl": "https://inventoryapi.dawaafinder.com/api/v1/"
+  },
+  "formularyapi": {
+    "url": "https://formulary.dawaafinder.com/api/v1/",
+    "docUrl": "https://formulary.dawaafinder.com/api/v1/"
+  },
+  "blogapi": {
+    "url": "https://blogapi.dawaafinder.com/api/v1/",
+    "docUrl": "https://blogapi.dawaafinder.com/api/v1/"
   }
 }
