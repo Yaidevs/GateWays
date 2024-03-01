@@ -28,9 +28,28 @@
     {
       "name": "Blog Api",
       "description": "Operations related to blog management"
+    },
+    {
+      "name": "Ads Api",
+      "description": "Operations related to ads management"
+    },
+    {
+      "name": "System Settings",
+      "description": "Operations related to system settings"
     }
   ],
   "paths": {
+    "/settings/microservices": {
+      "get": {
+        "description": "getting all settings related stuff",
+        "tags": ["System Settings"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/userapi": {
       "get": {
         "description": "anyting related to user goes here",
@@ -81,6 +100,17 @@
       "get": {
         "description": "anyting related to product",
         "tags": ["Inventory Api"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/adsapi": {
+      "get": {
+        "description": "anyting related to ads",
+        "tags": ["Ads Api"],
         "responses": {
           "200": {
             "description": "OK"

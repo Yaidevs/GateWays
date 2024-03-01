@@ -18,5 +18,9 @@
   "blogapi": {
     "url": "https://blogapi.dawaafinder.com/api/v1/",
     "docUrl": "https://blogapi.dawaafinder.com/api/v1/"
+  },
+  "adsapi": {
+    "url": "https://ads.dawaafinder.com/api/v1/",
+    "docUrl": "https://ads.dawaafinder.com/api/v1/"
   }
 }
