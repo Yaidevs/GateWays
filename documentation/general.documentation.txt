@@ -1,0 +1,85 @@
+/**
+ * @swagger
+ * swagger: '2.0'
+ * info:
+ *   title: 'DawaFinder Getway Api [Here See Example of using endpoints ](http://dawaafinder.com/)'
+ *   description: 'DawaFinder Getway Api is a gateway to access all dawafinder microservices.'
+ *   version: '1.0.0'
+ * host: 'api.dawaafinder.com'
+ * basePath: '/'
+ * schemes:
+ *   - 'https'
+ *   - 'http'
+ * tags:
+ *   - name: 'User Api'
+ *     description: 'Operations related to user management'
+ *   - name: 'Product And Medicine Api'
+ *     description: 'Operations related to medicine and product management'
+ *   - name: 'Inventory Api'
+ *     description: 'Operations related to inventory management'
+ *   - name: 'Formulary Api'
+ *     description: 'Operations related to medicine formulary management'
+ *   - name: 'Blog Api'
+ *     description: 'Operations related to blog management'
+ *   - name: 'Ads Api'
+ *     description: 'Operations related to ads management'
+ *   - name: 'System Settings'
+ *     description: 'Operations related to system settings'
+ * paths:
+ *   /settings/microservices:
+ *     get:
+ *       description: 'Getting all settings related stuff'
+ *       tags: 
+ *         - 'System Settings'
+ *       responses:
+ *         200:
+ *           description: 'OK'
+ *   /userapi:
+ *     get:
+ *       description: 'Anything related to user goes here'
+ *       tags: 
+ *         - 'User Api'
+ *       responses:
+ *         200:
+ *           description: 'OK'
+ *   /productapi:
+ *     get:
+ *       description: 'Anything related to product'
+ *       tags: 
+ *         - 'Product And Medicine Api'
+ *       responses:
+ *         200:
+ *           description: 'OK'
+ *   /blogapi:
+ *     get:
+ *       description: 'Anything related to blog'
+ *       tags: 
+ *         - 'Blog Api'
+ *       responses:
+ *         200:
+ *           description: 'OK'
+ *   /formularyapi:
+ *     get:
+ *       description: 'Anything related to product'
+ *       tags: 
+ *         - 'Formulary Api'
+ *       responses:
+ *         200:
+ *           description: 'OK'
+ *   /inventoryapi:
+ *     get:
+ *       description: 'Anything related to product'
+ *       tags: 
+ *         - 'Inventory Api'
+ *       responses:
+ *         200:
+ *           description: 'OK'
+ *   /adsapi:
+ *     get:
+ *       description: 'Anything related to ads'
+ *       tags: 
+ *         - 'Ads Api'
+ *       responses:
+ *         200:
+ *           description: 'OK'
+ */

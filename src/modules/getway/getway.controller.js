@@ -4,6 +4,7 @@ const path = require('path');
 const catchAsync = require("./../../../errorHandler/catchAsync.errorHandler");
 const serverJsonPath = path.join(__dirname, './../../../config/services.json');
 
+// for adding a new microservice to the system.
 exports.AddService = catchAsync(async (req, res) => {
 	const {serviceName, url, docUrl} = req.body;
 	// Read existing data from server.json

@@ -29,7 +29,10 @@ exports.createServer = () => {
 	// app.get("/", (_req, res) => {
 	// res.status(200).send(" DawaFinder Getway  server is UP!");
 	// });
-	app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+	// app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+	const {swaggerUi, specs} = require('./swagger');
+	// ? DOCUMENTATIONS FOR THE WHOLE API.
+	app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(specs));
 	app.use(serviceDiscovery);
 	app.use(errorMiddleware);
 
