@@ -31,7 +31,7 @@ const options = {
 			},
 		]
 	},
-	apis: ['./documentation/*.txt'], // Path to the API docs
+	apis: ['./documentation/*.txt'], // *  *// Path to the API docs
 };
 
 const specs = swaggerJsDocs(options);

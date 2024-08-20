@@ -26,7 +26,7 @@ const serviceDiscovery = catchAsync(async (req, res, next) => {
 	// console.log(req.headers);
 	const role = req.headers.authorization ? await getRole(req) : null;
 	console.log(role);
-	req.headers.authorization = null;
+	// req.headers.authorization = null;
 	req.headers.role = role;
 	// console.log(req.headers);
 	let microserviceResponse = await microserviceRes(req, totalUrl);

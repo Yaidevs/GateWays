@@ -17,7 +17,7 @@ const microserviceRes = async (headers, url) => {
 	try {
 		console.log(headers);
 		console.log(url)
-		const response = await axios({method: 'GET', url: url, headers: headers});
+		const response = await axios({method: 'GET', null: url, headers: headers});
 		console.log(response);
 		const role = response.data.role;
 		return role ? role : null;
