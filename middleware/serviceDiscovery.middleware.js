@@ -47,7 +47,8 @@ const microserviceRes = async (req, url) => {
 			'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
 			'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 			'Access-Control-Allow-Credentials': true,
-			'role': req.headers.role
+			'role': req.headers.role,
+			'Authorization': req.headers.authorization
 		};
 
 		console.log(headers)
