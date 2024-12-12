@@ -4,7 +4,7 @@ const {createServer} = require("./app.js");
 const PORT = process.env.PORT || 4000;
 
 /*
-General error handling for syncronus code..
+General error handling for syncronus code..;
 
 ! REMEMBER: it should be set in the beginning.
 
