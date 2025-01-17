@@ -20,7 +20,7 @@
     "docUrl": "https://blogapi.dawaafinder.com/api/v1/"
   },
   "adsapi": {
-    "url": "https://ads.dawaafinder.com/api/v1/",
-    "docUrl": "https://ads.dawaafinder.com/api/v1/"
+    "url": "https://ads.betale.et/api/v1/",
+    "docUrl": "https://ads.betale.et/api/v1/"
   }
 }
