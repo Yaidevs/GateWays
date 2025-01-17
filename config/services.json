@@ -22,5 +22,9 @@
   "adsapi": {
     "url": "https://ads.betale.et/api/v1/",
     "docUrl": "https://ads.betale.et/api/v1/"
+  },
+   "searchandprescriptionapi": {
+    "url": "https://searchandprescription.dawaafinder.com/api/v1/",
+    "docUrl": "https://searchandprescription.dawaafinder.com/api/v1/"
   }
 }
