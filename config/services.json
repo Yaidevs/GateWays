@@ -20,10 +20,10 @@
     "docUrl": "https://blogapi.dawaafinder.com/api/v1/"
   },
   "adsapi": {
-    "url": "https://ads.betale.et/api/v1/",
-    "docUrl": "https://ads.betale.et/api/v1/"
+    "url": "https://adservice.dawaafinder.com/api/v1/",
+    "docUrl": "https://adservice.dawaafinder.com/api/v1/"
   },
-   "searchandprescriptionapi": {
+  "searchandprescriptionapi": {
     "url": "https://searchandprescription.dawaafinder.com/api/v1/",
     "docUrl": "https://searchandprescription.dawaafinder.com/api/v1/"
   }
