@@ -12,8 +12,8 @@
     "docUrl": "https://inventoryapi.dawaafinder.com/api/v1/"
   },
   "formularyapi": {
-    "url": "https://formulary.dawaafinder.com/api/v1/",
-    "docUrl": "https://formulary.dawaafinder.com/api/v1/"
+    "url": "https://formularyapi.dawaafinder.com/api/v1/",
+    "docUrl": "https://formularyapi.dawaafinder.com/api/v1/"
   },
   "blogapi": {
     "url": "https://blogapi.dawaafinder.com/api/v1/",
