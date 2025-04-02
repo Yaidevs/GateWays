@@ -1,4 +1,8 @@
 {
+  "gibiinfoApi": {
+    "url": "http://51.21.9.171:5001/api/v1/",
+    "docUrl": "http://51.21.9.171:5001/api/v1/doc/"
+  },
   "userapi": {
     "url": "https://user.dawaafinder.com/api/v1/",
     "docUrl": "https://user.dawaafinder.com/api/v1/doc/"
