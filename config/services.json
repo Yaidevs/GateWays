@@ -7,6 +7,10 @@
     "url": "https://user.dawaafinder.com/api/v1/",
     "docUrl": "https://user.dawaafinder.com/api/v1/doc/"
   },
+  "trmsapi": {
+    "url": "http://51.20.42.52/api/v1",
+    "docUrl": "https://user.dawaafinder.com/api/v1/doc/"
+  },
   "productapi": {
     "url": "https://productapi.dawaafinder.com/api/v1/",
     "docUrl": "https://productapi.dawaafinder.com/docs/"
